@@ -17,6 +17,14 @@ function setup() {
 
 }
 
+/*
+Notice that the sketch stops generating new patterns when the mouse stops moving.
+That’s because at the bottom of the draw() function the noLoop() command
+is called which stops the sketch from looping further. At the same time, 
+inside the mouseMoved() function we call the loop() function which 
+reactivates the sketch when the mouse is moved.
+*/
+
 function draw() {
     background(0);
 
@@ -33,11 +41,3 @@ function draw() {
 function mouseMoved(){
     loop();
 }
-
-/*
-Notice that the sketch stops generating new patterns when the mouse stops moving.
-That’s because at the bottom of the draw() function the noLoop() command
-is called which stops the sketch from looping further. At the same time, 
-inside the mouseMoved() function we call the loop() function which 
-reactivates the sketch when the mouse is moved.
-*/
